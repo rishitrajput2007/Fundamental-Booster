@@ -1,73 +1,110 @@
-# Excel Student Data Analysis Project
+# Excel Data Analysis Project
 
 ## Overview
 
-This project demonstrates the use of Microsoft Excel functions for data analysis and management of student records.
+This project demonstrates the use of various Microsoft Excel functions for data analysis, data lookup, filtering, and date analysis.
 
 ## Dataset
 
-The dataset contains:
+The workbook contains multiple datasets related to:
 
-* Student ID
-* Student Name
-* Math Marks
-* Science Marks
-* English Marks
-* Enrollment Date
+* Student Records
+* Employee Records
+* Sales Records
 
 ## Tasks Performed
 
 ### 1. Average Calculation
 
-Used the AVERAGE function to calculate the average marks of each student.
+Calculated the average marks of students using the AVERAGE function.
 
-Example:
+**Formula:**
+
+```excel
 =AVERAGE(C2:E2)
+```
 
 ### 2. Grade Assignment
 
-Used IF statements to assign grades based on average marks.
+Assigned grades based on student average marks using IF statements.
 
-Example:
+**Formula:**
+
+```excel
 =IF(G2>=80,"A",IF(G2>=70,"B",IF(G2>=60,"C",IF(G2>=50,"D","F"))))
+```
 
 ### 3. Count Students Above 60
 
-Used COUNTIF to count students with average marks greater than 60.
+Counted the number of students scoring above 60 using COUNTIF.
 
-Example:
+**Formula:**
+
+```excel
 =COUNTIF(G2:G21,">60")
+```
 
 ### 4. VLOOKUP
 
-Used VLOOKUP to retrieve product prices from sales data.
+Retrieved product amounts from sales data using VLOOKUP.
 
-Example:
-=VLOOKUP(ProductName,TableRange,ColumnNumber,FALSE)
+**Formula:**
+
+```excel
+=VLOOKUP(H2,B2:E21,4,FALSE)
+```
 
 ### 5. XLOOKUP
 
-Used XLOOKUP to dynamically fetch employee salary information.
+Fetched employee salary information dynamically using XLOOKUP.
 
-Example:
-=XLOOKUP(EmployeeID,EmployeeRange,SalaryRange)
+**Formula:**
+
+```excel
+=XLOOKUP(G2,A2:A21,D2:D21,"Employee Not Found")
+```
 
 ### 6. Date Analysis
 
-Formatted enrollment dates and extracted date information for analysis.
+Formatted and analyzed enrollment/joining dates using Excel date functions.
+
+**Functions Used:**
+
+```excel
+=YEAR(E2)
+=MONTH(E2)
+=DATEDIF(E2,TODAY(),"Y")
+```
 
 ### 7. FILTER Function
 
-Used FILTER to display students whose average marks are greater than 80.
+Extracted students whose average marks were above 80.
 
-Example:
+**Formula:**
+
+```excel
 =FILTER(B2:G21,G2:G21>80)
+```
+
+## Output Screenshots
+
+### Output 1
+
+![Output 1](Output/Output-1.png)
+
+### Output 2
+
+![Output 2](Output/Output-2.png)
+
+### Output 3
+
+![Output 3](Output/Output-3.png)
 
 ## Files Included
 
 * Project-1.xlsx
 * README.md
-* Screenshots of outputs
+* Output Screenshots
 
 ## Tools Used
 
